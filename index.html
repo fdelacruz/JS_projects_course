@@ -8,6 +8,15 @@
   <body>
     <h1>Hello, World!</h1>
     <h4>Hello, People!!</h4>
-    <button onclick="alert('Hello, World!')">click me</button>
+    <button class="btn" type="submit">Click Me</button>
+    <button class="btn" type="submit">Me</button>
+    <button class="btn" type="submit">And Me</button>
+    <script>
+      document.querySelectorAll('.btn').forEach((item) => {
+        item.addEventListener('click', () => {
+          alert('This is Awesome!!')
+        })
+      })
+    </script>
   </body>
 </html>
