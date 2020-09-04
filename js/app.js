@@ -1,6 +1,6 @@
-let amount = 10;
-while(amount > 0) {
-  console.log('I have ' + amount + " dollars and I'm going to the mall");
-  amount--;
-}
+let money = 0;
 
+do {
+  console.log('You have ' + money + ' dollars');
+  money++
+} while (money < 10);
