@@ -1,28 +1,14 @@
-// Functions, return, if, arrays, for loop
+// Reference vs Value
 
-const gas = [20, 40, 100];
-const food = [10, 40, 50];
+let number = 7;
+let number2 = number;
+console.log(`the first value is ${number}`);
+console.log(`the second value is ${number2}`);
 
-function calculateTotal(arr) {
-  let total = 0;
-  for (let i = 0;i < arr.length; i++) {
-    total += arr[i]
-  }
+let person = {name: 'bob'};
+let person2 = person;
 
-  if (total > 100) {
-    console.log(`Whoa! You are spending way too much`);
-    return total
-  }
+person2.name = 'susy'
 
-  console.log(`You are good total is less than 100`);
-
-  return total;
-}
-
-// gasTotal = calculateTotal(gas)
-foodTotal = calculateTotal(food)
-
-console.log({
-  gas: gasTotal,
-  food: foodTotal
-});
+console.log(`the name of the first parson is ${person.name}`);
+console.log(`the name of the second parson is ${person2.name}`);
