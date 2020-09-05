@@ -1,14 +1,15 @@
-// Reference vs Value
+// Null and Undefined
+// both represent "no value"
 
-let number = 7;
-let number2 = number;
-console.log(`the first value is ${number}`);
-console.log(`the second value is ${number2}`);
+// undefined - javascript can not find value of for this
 
-let person = {name: 'bob'};
-let person2 = person;
+// variable without value
+// missing function arguments
+// missing object properties
 
-person2.name = 'susy'
+// null - developer sets the value
 
-console.log(`the name of the first parson is ${person.name}`);
-console.log(`the name of the second parson is ${person2.name}`);
+let number = 20 + null // 20 + 0
+let number2 = 20 + undefined;
+console.log(number);
+console.log(number2);
