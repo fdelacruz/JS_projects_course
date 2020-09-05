@@ -1,31 +1,12 @@
-// String properties and methods
+// Template Literals - ES6+
+// Backstick characters ``
+// Interpolation ${}
 
-let text = ' Peter Jordan';
-let result = text.length;
-console.log(result);
+const name = 'john';
+const age = 49;
+const sentence = "This is " + name + ' and he is ' + age + ' years old';
 
-console.log(text.length);
-console.log(text.toLowerCase());
-console.log(text.toUpperCase());
-console.log(text.charAt(0));
-console.log(text.charAt(text.length - 1));
-console.log(text.indexOf('P'));
-console.log(text.indexOf('n'));
-console.log(text);
-console.log(text.trim());
-console.log(text.trim().toLowerCase().startsWith('peter'));
-console.log(text.includes('eter'));
-console.log(text.slice(0, 2));
-console.log(text.slice(-3));
+const value = `This is ${name} and he is ${age} years old`;
+console.log(value);
 
-// const person = {
-//   name: 'peter',
-//   greeting() {
-//     console.log("Hey, I'm Peter");
-//   },
-// };
-
-// console.log(person);
-
-// console.log(person.name);
-// person.greeting();
+console.log(sentence);
