@@ -1,12 +1,39 @@
-// Template Literals - ES6+
-// Backstick characters ``
-// Interpolation ${}
+// Array Properties and Methods
 
-const name = 'john';
-const age = 49;
-const sentence = "This is " + name + ' and he is ' + age + ' years old';
+let names = ['john', 'bob', 'barry', 'olga', 'ben'];
 
-const value = `This is ${name} and he is ${age} years old`;
-console.log(value);
+// length
+console.log(names.length);
+console.log(names[names.length - 1]);
 
-console.log(sentence);
+// concat
+const lastNames= ['smith', 'cohen', 'bullick'];
+const allNames = names.concat(lastNames);
+console.log(allNames);
+
+// reverse
+console.log(allNames.reverse());
+
+// unshift
+allNames.unshift('susy')
+allNames.unshift('anna')
+console.log(allNames);
+
+// shift
+allNames.shift()
+console.log(allNames);
+allNames.shift()
+console.log(allNames);
+
+// push
+allNames.push('susy')
+console.log(allNames);
+
+// pop
+allNames.pop()
+console.log(allNames);
+
+// splice - mutates original array
+const specificNames = allNames.splice(0, 3);
+console.log(specificNames);
+console.log(allNames);
