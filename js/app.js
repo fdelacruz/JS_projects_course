@@ -1,19 +1,18 @@
-// Local Scope
-// can not be accessed from outside code blocks
-// if - NOT VAR
+// Variable Lookup
+// {} - code block
 
-let name = 'bob';
+const globalNumber = 5;
 
-function calculate() {
-  const name = 'susy'
-  const age = 25;
+function add(num1, num2) {
+  const globalNumber = 20;
+  const result = num1 + num2 + globalNumber;
+  function multipy() {
+    const globalNumber = 100;
+    const multipyResult = result * globalNumber;
+    console.log(multipyResult);
+  }
+  multipy()
+  return result;
 }
-// console.log(age);
 
-calculate()
-
-if (true) {
-  const name = 'anna'
-}
-
-console.log(`my name is ${name} and I'm awesome`);
+console.log(add(3,4));
