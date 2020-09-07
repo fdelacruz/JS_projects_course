@@ -1,13 +1,18 @@
-// Callback functions, Higher Order Functions, Functions as First Class Objects/Citizens
+// forEach
+// does not return array
 
-function morning(name) {
-  return `Good morning ${name.toUpperCase()}`;
-}
+const people = [
+  {name: 'susy', age: 20, position: 'developer'},
+  {name: 'peter', age: 25, position: 'designer'},
+  {name: 'john', age: 35, position: 'devops'},
+];
 
-function greet(name, cb) {
-  const myName = 'Francisco';
-  console.log(`${cb(name)}, my name is ${myName}`);
-}
+// function showPerson(person) {
+//   console.log(person.position.toUpperCase());
+// }
 
-greet('bob', morning);
-greet('peter', morning);
+// people.forEach(showPerson);
+
+people.forEach(function(item) {
+  console.log(item.name.toUpperCase());
+})
