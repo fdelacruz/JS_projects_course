@@ -1,5 +1,7 @@
-// forEach
-// does not return array
+// map
+// does return a new array
+// does not change size of original array
+// uses values from original array when making new one
 
 const people = [
   {name: 'susy', age: 20, position: 'developer'},
@@ -7,12 +9,21 @@ const people = [
   {name: 'john', age: 35, position: 'devops'},
 ];
 
-// function showPerson(person) {
-//   console.log(person.position.toUpperCase());
-// }
+const ages = people.map(function(person) {
+  return person.age
+});
 
-// people.forEach(showPerson);
+const newPeople = people.map(function(person) {
+  return {
+    firstName: person.name,
+    oldAge: person.age + 20
+  };
+});
 
-people.forEach(function(item) {
-  console.log(item.name.toUpperCase());
-})
+const names = people.map(function(person) {
+  return `<h1>${person.name}</h1>`
+});
+
+document.body.innerHTML = names.join('')
+
+// console.log(names);
