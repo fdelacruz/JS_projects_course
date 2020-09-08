@@ -1,22 +1,19 @@
-// reduce
-// iterates, callback function
-// reduces to a single value = number, array, object
-// 1 parameter ('acc') = total of all calculations
-// 2 parameter ('curr') = current iteration/value
+// Math
+// Standard built-in object - always available
 
-const people = [
-  {name: 'susy', age: 20, position: 'developer', id: 1, salary: 200},
-  {name: 'peter', age: 25, position: 'designer', id: 2, salary: 300},
-  {name: 'john', age: 35, position: 'devops', id: 3, salary: 400},
-  {name: 'anna', age: 45, position: 'manager', id: 4, salary: 500},
-];
+// const number = 4.56789
+// const result = Math.floor(number);
 
-const total = people.reduce((acc, currItem) => {
-  console.log(`total ${acc}`);
-  console.log(`current item: ${currItem.salary}`);
-  acc += currItem.salary;
+// const number = 4.12222;
+// const result = Math.ceil(number);
 
-  return acc;
-}, 0);
+// const number = 25
+// const result = Math.sqrt(number);;
 
-console.log(total);
+ // const result = Math.PI;
+ // const result = Math.min(4, 5, 6, 7, 9);
+ // const result = Math.max(4, 5, 6, 7, 9);
+
+ const result = Math.floor(Math.random() * 10 + 1);
+
+console.log(result);
