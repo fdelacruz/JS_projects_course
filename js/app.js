@@ -1,42 +1,28 @@
-// Date
+// Select the element or group of elements that we want
+// Decide the effect we want to apply to the  selection
 
-const months = [
-  'January',
-  'February',
-  'March',
-  'April',
-  'May',
-  'June',
-  'July',
-  'August',
-  'September',
-  'October',
-  'November',
-  'December'
-];
+// getElementsByTagName('tagname');
 
-const days = [
-  'Sunday',
-  'Monday',
-  'Tuesday',
-  'Wednesday',
-  'Thursday',
-  'Friday',
-  'Saturday'
-];
+// node-list = array-like object
+// index, length property but not array methods
 
-// const date = new Date;
-const date = new Date('1/27/1971');
-const month = date.getMonth();
-// console.log(months[month]);
+const headings = document.getElementsByTagName('h2');
+headings[0].style.color = 'red';
+// console.log(headings.length);
 
-const day = date.getDay();
-// console.log(days[day]);
+const items = document.getElementsByTagName('li');
+// items.forEach((item) => {
+//   console.log(item);
+// });
 
-// console.log(date.getDate());
-// console.log(date.getFullYear());
+items[2].style.color = 'orange';
 
-const sentence = `${days[day]}, ${date.getDate()} ${months[month]} ${date.getFullYear()}`;
+const listItems = [...items];
 
-// console.log(sentence);
-document.body.innerHTML = sentence;
+listItems.forEach((item) => {
+  console.log(item);
+});
+
+console.log(items);
+console.log(listItems);
+
