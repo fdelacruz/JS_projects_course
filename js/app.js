@@ -1,10 +1,21 @@
 // Select the element or group of elements that we want
 // Decide the effect we want to apply to the  selection
 
-// getElementsByClassName('classname');
+// querySelector('any css'); - selects single
+// querySelectorAll('any css'); - selects all
 
-// node-list = array-like object
-// index, length property but not array methods
+const result = document.querySelector('#result');
+result.style.backgroundColor = 'lightgray';
 
-const listItems = document.getElementsByClassName('special');
-listItems[1].style.color = 'blue';
+const item = document.querySelector('.special');
+// console.log(item);
+
+const lastItem = document.querySelector('li:last-child');
+// console.log(lastItem);
+
+const list = document.querySelectorAll('.special');
+
+list.forEach(item => {
+  console.log(item);
+  item.style.color = 'blue';
+})
