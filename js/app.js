@@ -1,21 +1,18 @@
 // Select the element or group of elements that we want
 // Decide the effect we want to apply to the  selection
 
-// querySelector('any css'); - selects single
-// querySelectorAll('any css'); - selects all
+// childNodes = return all childNodes including whitespace which is treated as a text node
+
+// children
+// firstChild
+// lastChild
 
 const result = document.querySelector('#result');
-result.style.backgroundColor = 'lightgray';
+const allChildren = result.childNodes;
+// console.log(allChildren);
 
-const item = document.querySelector('.special');
-// console.log(item);
+// console.log(result.children);
+console.log(result.children);
 
-const lastItem = document.querySelector('li:last-child');
-// console.log(lastItem);
-
-const list = document.querySelectorAll('.special');
-
-list.forEach(item => {
-  console.log(item);
-  item.style.color = 'blue';
-})
+console.log(result.firstChild);   // whitespace
+console.log(result.lastChild);
