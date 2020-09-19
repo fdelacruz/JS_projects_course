@@ -15,7 +15,7 @@ document.body.appendChild(bodyDiv);
 const heading = document.createElement('h2');
 const headingText = document.createTextNode("i'm a dynamic heading");
 heading.appendChild(headingText)
-document.body.appendChild(heading)
 heading.classList.add('blue')
+result.appendChild(heading)
 
 console.log(heading.firstChild);
