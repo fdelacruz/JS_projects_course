@@ -1,23 +1,21 @@
-// className
-// classList
+// createElement('element')
+// createTextNode('text content')
+// element.appendChild('childElement')
 
-const first = document.getElementById('first');
-const second = document.getElementById('second');
-const third = document.getElementById('third');
+const result = document.querySelector('#result');
 
-const classValue = first.className;
-// console.log(classValue);
+// create empty element
+const bodyDiv = document.createElement('div');
 
-second.className = 'colors text';
+// create text node
+const text = document.createTextNode('a simple body div');
+bodyDiv.appendChild(text);
+document.body.appendChild(bodyDiv);
 
-// third.classList.add('colors');
-// third.classList.add('text');
-third.classList.add('colors', 'text');
+const heading = document.createElement('h2');
+const headingText = document.createTextNode("i'm a dynamic heading");
+heading.appendChild(headingText)
+document.body.appendChild(heading)
+heading.classList.add('blue')
 
-const classValue2 = third.classList;
-console.log(classValue2);
-
-third.classList.remove('text');
-
-let result = third.classList.contains('text')
-console.log(result);
+console.log(heading.firstChild);
