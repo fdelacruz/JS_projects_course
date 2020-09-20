@@ -1,18 +1,4 @@
-// innerHTML
-// textContent
+// CSS
 
-const list = document.getElementById('first');
-const div = document.getElementById('second');
-const item= document.querySelector('.item');
-
-console.log(div.textContent);
-console.log(div.innerHTML);
-
-console.log(list.textContent);
-console.log(list.innerHTML);
-
-const ul = document.createElement('ul');
-ul.innerHTML = `<li class="item">list item</li>
-      <li>list item</li>`
-
-document.body.appendChild(ul)
+const random = document.querySelector('.random');
+random.classList.add('title')
