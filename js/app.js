@@ -2,7 +2,7 @@
 // createTextNode('text content')
 // element.appendChild('childElement')
 
-// insertBefore('element', 'location')
+// replaceChild('new', 'old')
 
 const result = document.querySelector('#result');
 const first = document.querySelector('.red');
@@ -21,5 +21,11 @@ heading.appendChild(headingText)
 heading.classList.add('blue')
 
 result.insertBefore(heading, first)
+
+const smallHeading = document.createElement('h6');
+const smallText = document.createTextNode(`i'm a small heading text`);
+smallHeading.classList.add('red');
+smallHeading.appendChild(smallText);
+document.body.replaceChild(smallHeading, bodyDiv)
 
 console.log(heading.firstChild);
