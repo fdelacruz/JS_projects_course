@@ -1,31 +1,7 @@
-// createElement('element')
-// createTextNode('text content')
-// element.appendChild('childElement')
-
-// replaceChild('new', 'old')
-
-const result = document.querySelector('#result');
-const first = document.querySelector('.red');
-
-// create empty element
-const bodyDiv = document.createElement('div');
-
-// create text node
-const text = document.createTextNode('a simple body div');
-bodyDiv.appendChild(text);
-document.body.insertBefore(bodyDiv, result)
+// prepend
+// innerText
 
 const heading = document.createElement('h2');
-const headingText = document.createTextNode("i'm a dynamic heading");
-heading.appendChild(headingText)
-heading.classList.add('blue')
+heading.innerText = 'i am a dynamic heading';
 
-result.insertBefore(heading, first)
-
-const smallHeading = document.createElement('h6');
-const smallText = document.createTextNode(`i'm a small heading text`);
-smallHeading.classList.add('red');
-smallHeading.appendChild(smallText);
-document.body.replaceChild(smallHeading, bodyDiv)
-
-console.log(heading.firstChild);
+document.body.prepend(heading);
