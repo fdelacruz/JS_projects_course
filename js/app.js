@@ -1,7 +1,8 @@
-// prepend
-// innerText
+// remove
+// removeChild
 
-const heading = document.createElement('h2');
-heading.innerText = 'i am a dynamic heading';
+const result = document.getElementById('result');
+// result.remove();
 
-document.body.prepend(heading);
+const heading = result.querySelector('h1');
+result.removeChild(heading);
