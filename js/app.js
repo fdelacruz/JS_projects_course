@@ -5,6 +5,13 @@
 const btn = document.querySelector('.btn');
 const heading = document.querySelector('h2');
 
-btn.addEventListener('click', () => {
-  heading.classList.add('red')
-});
+function changeColor() {
+  let hasClass = heading.classList.contains('red');
+  if (hasClass) {
+    heading.classList.remove('red')
+  } else {
+    heading.classList.add('red')
+  }
+}
+
+btn.addEventListener('click', changeColor);
