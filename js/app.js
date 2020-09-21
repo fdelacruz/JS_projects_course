@@ -1,4 +1,10 @@
-// CSS
+// select element
+// addEventListener()
+// what, when, what to do
 
-const random = document.querySelector('.random');
-random.classList.add('title')
+const btn = document.querySelector('.btn');
+const heading = document.querySelector('h2');
+
+btn.addEventListener('click', () => {
+  heading.classList.add('red')
+});
