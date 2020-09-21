@@ -1,17 +1,28 @@
-// select element
-// addEventListener()
-// what, when, what to do
+// click = fires after full action occurs
+// mousedown - button is pressed
+// mouseup - button is released
+// mouseenter - moved onto an element
+// mouseleave - moved out of an element
 
-const btn = document.querySelector('.btn');
-const heading = document.querySelector('h2');
+const heading  = document.querySelector('h2');
+const btn  = document.querySelector('.btn');
 
-function changeColor() {
-  let hasClass = heading.classList.contains('red');
-  if (hasClass) {
-    heading.classList.remove('red')
-  } else {
-    heading.classList.add('red')
-  }
-}
+btn.addEventListener('click', () => {
+  console.log('click');
+});
 
-btn.addEventListener('click', changeColor);
+btn.addEventListener('mousedown', () => {
+  console.log('down');
+});
+
+btn.addEventListener('mouseup', () => {
+  console.log('up');
+});
+
+heading.addEventListener('mouseenter', () => {
+  heading.classList.add('blue')
+});
+
+heading.addEventListener('mouseleave', () => {
+  heading.classList.remove('blue')
+});
