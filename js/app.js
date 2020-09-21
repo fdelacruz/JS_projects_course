@@ -1,18 +1,23 @@
-// keypress - when key is pressed
-// keydown - when key is down
-// keyup - when key is released
+// event object argument e, evt
+// info about triggered event
+// event.type
+// event.currentTarget
+// this keyword
+// preventDefault() - prevents default behaviour
 
-const nameInput = document.getElementById('name');
+const heading = document.querySelector('h1');
+const btn = document.querySelector('.btn');
+const link = document.getElementById('link');
 
-
-// nameInput.addEventListener('keypress', () => {
-//   console.log('you pressed??');
-// });
-
-// nameInput.addEventListener('keydown', () => {
-//   console.log('you pressed??');
-// });
-
-nameInput.addEventListener('keyup', () => {
-  console.log(nameInput.value);
+heading.addEventListener('click', (e) => {
+  console.log(e.currentTarget);
 });
+
+btn.addEventListener('click', (e) => {
+  e.currentTarget.classList.add('blue')
+  console.log(e.type);
+});
+
+link.addEventListener('click', (e) => {
+  e.preventDefault();
+})
