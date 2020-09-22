@@ -1,25 +1,25 @@
 // allows select dynamic element
 // event propagation - order the events are fired
 // event bubbling - clicked element first the bubbles up -- default
-// event capturing - fires at the root and fires until reaches target
 
-const container = document.querySelector('.container');
-const list = document.querySelector('.list-items');
+const container = document.querySelector('.container') ;
+const btn = document.querySelector('.btn') ;
+// const heading = document.querySelector('.heading') ;
+// console.log(heading);
 
-function showBubbling(e) {
-  console.log('current target', e.currentTarget);
-  console.log('target', e.target);
-  if (e.target.classList.contains('link')) {
-    console.log('link clicked');
+btn.addEventListener('click', () => {
+  const element = document.createElement('h1');
+  element.classList.add('heading');
+  element.textContent = `i'm inside the container`;
+  container.appendChild(element);
+});
+
+container.addEventListener('click', (e) => {
+  if (e.target.classList.contains('heading')) {
+    console.log('click');
   }
-}
+});
 
-function stopPropagation(e) {
-  console.log('clicked');
-  e.stopPropagation();
-}
-
-list.addEventListener('click', showBubbling, {capture: true})
-container.addEventListener('click', showBubbling, {capture: true})
-document.addEventListener('click', showBubbling, {capture: true})
-window.addEventListener('click', showBubbling, {capture: true})
+// heading.addEventListener('click', () => {
+//   console.log('click');
+// })
