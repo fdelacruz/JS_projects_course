@@ -5,9 +5,24 @@ function Counter(element, value) {
   this.increaseBtn = element.querySelector('.increase');
   this.decreaseBtn = element.querySelector('.decrease');
   this.valueDom = element.querySelector('.value');
+  this.originalValue = value
   this.valueDom.textContent = this.value;
 }
 
+Counter.prototype.increase = function() {
+  this.value++;
+  this.valueDom.textContent = this.value
+};
+
+Counter.prototype.decrease = function() {
+  this.value--
+  this.valueDom.textContent = this.value
+};
+
+Counter.prototype.reset = function() {
+  this.value = this.originalValue;
+  this.valueDom.textContent = this.originalValue
+};
 const firtCounter = new Counter(getElement('.first-counter'), 100);
 const secondCounter = new Counter(getElement('.second-counter'), 200);
 
