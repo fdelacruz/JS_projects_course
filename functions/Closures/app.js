@@ -1,14 +1,11 @@
 // Closures
-// closures give you an access to an outer function's scope from an inner function
-// make private variables with closures
 
-function outer() {
-  let privateVar = 'secret';
-
-  function inner() {
-    console.log(`hello there secret is: ${privateVar}`);
+function newAccount (name, initialBalance) {
+  const balance = initialBalance
+  function showBalance () {
+    console.log(`Balance: ${balance}`)
   }
-  return inner;
+  return showBalance
 }
 
-outer()(); // invoking inner
+newAccount('susan', 500)() // showBalance invoked
