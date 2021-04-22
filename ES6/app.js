@@ -1,27 +1,28 @@
 // var, let , const
-// define, update, redefine
-// const cannot mutate primitive type
+// let, const - blocked scoped {} - anything within {}
+// var - function scoped
 
-// define
-var number = 100
-console.log(number)
-// update
-number = 200
-console.log(number)
-// redefine
-var number = 'orange'
-console.log(number)
+// global scope
+var amount = 100
 
-let amount = 100;
-console.log(amount);
-amount = 200
-// console.log(amount);
-// let amount = 'orange' // Error, no redefine for let
+function greet() {
+  // local scope
+  var random = 'some random value'
+  console.log(`hello there ${amount} ${random}`);
+}
 
-const total = 100;
+// console.log(random);
+
+// greet()
+
+let total = 1000
+let test = true
+
+if (test) {
+  // local scope
+  let total = 2000
+  let value = 3000;
+  console.log('hello there');
+}
+// console.log(value);
 console.log(total);
-// total = 200 // Error, no update for const
-
-const person = {name: 'bob'};
-person.name = 'rolf'
-console.log(person.name);
