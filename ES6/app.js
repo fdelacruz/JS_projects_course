@@ -1,28 +1,11 @@
-// var, let , const
-// let, const - blocked scoped {} - anything within {}
-// var - function scoped
+// Template Strings/Literals
+// `` backticks
+const name = 'bob'
+const lastName = 'sanders'
+const age = 50
 
-// global scope
-var amount = 100
+// const phrase =
+//   'My full name is ' + name + ' ' + lastName + " and I'm " + age + ' years old.'
 
-function greet() {
-  // local scope
-  var random = 'some random value'
-  console.log(`hello there ${amount} ${random}`);
-}
-
-// console.log(random);
-
-// greet()
-
-let total = 1000
-let test = true
-
-if (test) {
-  // local scope
-  let total = 2000
-  let value = 3000;
-  console.log('hello there');
-}
-// console.log(value);
-console.log(total);
+const phrase2 = `My full name is ${name.toUpperCase()} ${lastName.toUpperCase()} and I'm ${age + 2} years old.`
+console.log(phrase2)
