@@ -1,19 +1,17 @@
-// Template Strings/Literals
-// `` backticks
+// Tagged Template Literals
 
-const person = {
-  name: 'kyle',
-  job: 'developer',
-  hobbies: ['surfing', 'baking', 'bowling']
-}
+const author = 'Some Author'
+const statement = 'Some Statement'
+
+const quote = highlight`Here is ${statement} by ${author} and it could not be more true`
+console.log(quote)
 
 const result = document.getElementById('result')
+result.innerHTML = quote
 
-// result.innerHTML = '<h2>' + person.name + '<h2>' + '<p>' + person.job + '</p>'
-
-result.innerHTML = `
-  <h2>${person.name}</h2>
-  <p>${person.job}</p>
-  <ul>${person.hobbies.map(item => { 
-    return `<li>${item}</li>` }).join('')}</ul>
-`
+function highlight (text, ...vars) {
+  const awesomeText = text.map((item, index) => {
+    return `${item} <strong class="blue">${vars[index] || ''}</strong>`
+  })
+  return awesomeText.join('')
+}
