@@ -1,17 +1,46 @@
-// Tagged Template Literals
+// Arrow Functions or Fat Arrow Functions
+// no name, always expressions, assign to variable
+// no function keyword
 
-const author = 'Some Author'
-const statement = 'Some Statement'
+// function sayHi() {
+//   console.log('hello');
+// }
+// sayHi()
 
-const quote = highlight`Here is ${statement} by ${author} and it could not be more true`
-console.log(quote)
+// const hello = function(name) {
+//   console.log(`Hello ${name}`);
+// };
+// hello('bob')
 
-const result = document.getElementById('result')
-result.innerHTML = quote
+// function triple(val1, val2) {
+//   return val1 * val2 * 3
+// }
+// triple()
 
-function highlight (text, ...vars) {
-  const awesomeText = text.map((item, index) => {
-    return `${item} <strong class="blue">${vars[index] || ''}</strong>`
-  })
-  return awesomeText.join('')
+const sayHi = () => console.log('hello there')
+sayHi()
+
+const double = value => value * 2
+console.log(double(4))
+
+const multiply = (num1, num2) => {
+  const result = num1 * num2
+  return result
 }
+const result = multiply(4, 6)
+console.log(result)
+
+// return object
+const object = () => ({ name: 'john', age: 50 })
+const person = object()
+console.log(person)
+
+// arrow functions as callbacks
+const numbers = [1, 2, 3, 4, 5, 6]
+const odds = numbers.filter(n => {
+  return n % 2 === 0
+})
+console.log(odds)
+
+const btn = document.querySelector('.btn')
+btn.addEventListener('click', () => console.log('You clicked me!!'))
