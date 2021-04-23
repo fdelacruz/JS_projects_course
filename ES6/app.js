@@ -1,11 +1,19 @@
 // Template Strings/Literals
 // `` backticks
-const name = 'bob'
-const lastName = 'sanders'
-const age = 50
 
-// const phrase =
-//   'My full name is ' + name + ' ' + lastName + " and I'm " + age + ' years old.'
+const person = {
+  name: 'kyle',
+  job: 'developer',
+  hobbies: ['surfing', 'baking', 'bowling']
+}
 
-const phrase2 = `My full name is ${name.toUpperCase()} ${lastName.toUpperCase()} and I'm ${age + 2} years old.`
-console.log(phrase2)
+const result = document.getElementById('result')
+
+// result.innerHTML = '<h2>' + person.name + '<h2>' + '<p>' + person.job + '</p>'
+
+result.innerHTML = `
+  <h2>${person.name}</h2>
+  <p>${person.job}</p>
+  <ul>${person.hobbies.map(item => { 
+    return `<li>${item}</li>` }).join('')}</ul>
+`
