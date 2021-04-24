@@ -1,16 +1,11 @@
-// Destructuring
+// Destructuring Swap Variables
 // faster/easier way to access/unpack values from arrays
 // objects into variables
 // Arrays
 
-const fruits = ['orange', 'banana', 'lemon']
-const friends = ['john', 'peter', 'bob', 'anna', 'kelly']
+let first = 'bob'
+let second = 'john';
 
-const orange = fruits[0]
-const banana = fruits[1]
-const lemon = fruits[2]
+[second, first] = [first, second]
 
-console.log(orange, banana, lemon)
-
-const [john, peter, bob] = friends
-console.log(john, peter, bob)
+console.log(first, second)
