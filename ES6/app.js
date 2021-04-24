@@ -1,12 +1,12 @@
-// Arrow Functions or Fat Arrow Functions
-// reg function: 'this' refers parent, left of the dot
-// arrow function: refers to it's current surrounding scope
+// default parameters, arrow function gotchas
+sayHi()
 
-const btn = document.querySelector('.btn')
+const john = 'John'
+const peter = 'Peter'
 
-btn.addEventListener('click', function () {
-  console.log(this)
-  setTimeout(() => {
-    this.style.color = 'black'
-  }, 3000)
-})
+function sayHi (person = 'Susan') {
+  console.log(`Hi ${person}`)
+}
+
+sayHello(peter)
+const sayHello = (person = 'Bob') => console.log(`Hello ${person}`)
