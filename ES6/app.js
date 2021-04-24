@@ -1,12 +1,16 @@
-// default parameters, arrow function gotchas
-sayHi()
+// Destructuring
+// faster/easier way to access/unpack values from arrays
+// objects into variables
+// Arrays
 
-const john = 'John'
-const peter = 'Peter'
+const fruits = ['orange', 'banana', 'lemon']
+const friends = ['john', 'peter', 'bob', 'anna', 'kelly']
 
-function sayHi (person = 'Susan') {
-  console.log(`Hi ${person}`)
-}
+const orange = fruits[0]
+const banana = fruits[1]
+const lemon = fruits[2]
 
-sayHello(peter)
-const sayHello = (person = 'Bob') => console.log(`Hello ${person}`)
+console.log(orange, banana, lemon)
+
+const [john, peter, bob] = friends
+console.log(john, peter, bob)
