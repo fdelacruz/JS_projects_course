@@ -1,7 +1,7 @@
 // Destructuring Swap Variables
 // faster/easier way to access/unpack values from arrays
 // objects into variables
-// Objects
+// As Function Arguments
 
 const bob = {
   first: 'bob',
@@ -12,5 +12,9 @@ const bob = {
   }
 }
 
-const { first: firstName, last, city } = bob
-console.log(firstName, last, city)
+function printPerson ({ first, last, city }) {
+  // const { first, last, city } = person
+  console.log(first, last, city)
+}
+
+printPerson(bob)
