@@ -1,14 +1,26 @@
-// Spread Operator ...
-// Allows an iterable to spread/expand individually inside receiver
-// Split  into single items and copy them
+// Rest Operator ...
+// gathers/collects the items
 
-const numbers = [4, 5, 6, 7, 8]
-console.log(Math.max(...numbers))
+// arrays
+const fruits = ['apple', 'orange', 'lemon', 'banana', 'pear']
+const [first, second, ...fruit] = fruits
+// console.log(first, fruit)
 
-const john = ['john', 'smith']
+// objects
+const person = { name: 'john', lastName: 'smith', job: 'developer' }
+const { job, ...rest } = person
+// console.log(job, rest)
 
-const sayHello = (firstName, lastName) => {
-  console.log(`Hello ${firstName} ${lastName}`)
+const testScores = [78, 90, 56, 43, 99, 65]
+
+const getAverage = (name, ...scores) => {
+  console.log(name)
+  console.log(scores)
+  let total = 0
+  for (const score of scores) {
+    total += score
+  }
+  console.log(`${name}'s average score is ${total / scores.length}`)
 }
 
-sayHello(...john)
+getAverage(person.name, ...testScores)
