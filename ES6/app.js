@@ -1,8 +1,12 @@
 // Spread Operator ...
 // Allows an iterable to spread/expand individually inside receiver
 // Split  into single items and copy them
-// ES2018 - ES8
 
-const person = { name: 'john', job: 'developer' }
-const newPerson = { ...person, age: 50, name: 'francisco' }
-console.log(newPerson)
+const headings = document.querySelectorAll('h1')
+const result = document.getElementById('result')
+
+const text = [...headings]
+  .map(item => `<span>${item.textContent}</span>`)
+  .join(' ')
+
+result.innerHTML = text
