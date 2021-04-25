@@ -1,20 +1,22 @@
-// Destructuring Swap Variables
-// faster/easier way to access/unpack values from arrays
-// objects into variables
-// As Function Arguments
+// new string methods
+// starsWith(), endsWith(), includes(), repeat()
 
-const bob = {
-  first: 'bob',
-  last: 'sanders',
-  city: 'chicago',
-  siblings: {
-    sister: 'jane'
-  }
-}
+const person = 'Peter Smith'
+const employee = '23456-EMP-PETER-SMITH'
+const manager = '23456-MAN-JOHN-DOE'
 
-function printPerson ({ first, last, city }) {
-  // const { first, last, city } = person
-  console.log(first, last, city)
-}
+// startsWith
+console.log(person.startsWith('Pet'))
+console.log(employee.startsWith('EMP', 6))
 
-printPerson(bob)
+// endsWith
+console.log(manager.endsWith('DOE'))
+console.log(manager.endsWith('MAN', 9))
+
+// includes
+console.log(employee.includes('PETER'))
+
+// repeat
+const multiplyPeople = (person, amount = 5) => person.repeat(amount)
+const people = multiplyPeople(person)
+console.log(people)
