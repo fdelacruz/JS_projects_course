@@ -1,25 +1,19 @@
-// for of - loops through the values of an iterable object
-// String, Array, Map, Set, etc - NOT Objects
-// unlike forEach - we can use break, continue
+// Spread Operator ...
+// Allows an iterable to spread/expand individually inside receiver
+// Split  into single items and copy them
 
-const fruits = ['apple', 'orange', 'banana', 'peach']
-const longName = 'John Smith Peter II'
-let shortName = ''
+const udemy = 'udemy';
+const letters = [...udemy];
+// console.log(letters);
 
-for (const letter of longName) {
-  // console.log(letter);
-  if (letter === ' ') {
-    continue
-  } else {
-    shortName += letter
-  }
-}
-console.log(shortName)
+const boys = ['john', 'peter', 'bob'];
+const girls = ['susan', 'anna'];
+const bestFriend = 'arnold';
 
-for (const fruit of fruits) {
-  if (fruit === 'banana') {
-    // break;
-    continue
-  }
-  console.log(fruit)
-}
+const friends = [...boys, ...girls, bestFriend];
+// console.log(friends);
+
+const newFriends = [...friends];
+newFriends[0] = 'karina'
+console.log(friends);
+console.log(newFriends);
