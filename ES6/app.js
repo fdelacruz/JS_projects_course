@@ -2,11 +2,13 @@
 // Allows an iterable to spread/expand individually inside receiver
 // Split  into single items and copy them
 
-const headings = document.querySelectorAll('h1')
-const result = document.getElementById('result')
+const numbers = [4, 5, 6, 7, 8]
+console.log(Math.max(...numbers))
 
-const text = [...headings]
-  .map(item => `<span>${item.textContent}</span>`)
-  .join(' ')
+const john = ['john', 'smith']
 
-result.innerHTML = text
+const sayHello = (firstName, lastName) => {
+  console.log(`Hello ${firstName} ${lastName}`)
+}
+
+sayHello(...john)
