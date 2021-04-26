@@ -1,13 +1,20 @@
 // Array.from and Array.of - NOT ON THE PROTOTYPE
 // Array.from
 // Array.of
-// of creates a new Array instance from a variable number of arguments
+// from - returns Array Object from any object with a length property of
+// an iterable object
+// from turns array-like/ish into Array - String, Nodelist, Set
 
-const example = ['one', 'two', 'three']
-// console.log(example)
-// console.log(example.map)
-// console.log(example.from)
-// console.log(example.of)
+const udemy = 'udemy'
+// console.log(Array.from(udemy))
 
-const friends = Array.of('john', 2, true);
-console.log(friends);
+function countTotal () {
+  // console.log(arguments)
+  const total = Array.from(arguments).reduce(
+    (total, currNum) => (total += currNum),
+    0
+  )
+  console.log(total)
+}
+
+countTotal(67, 89, 54)
