@@ -5,16 +5,17 @@
 // an iterable object
 // from turns array-like/ish into Array - String, Nodelist, Set
 
-const udemy = 'udemy'
-// console.log(Array.from(udemy))
+const p = document.querySelectorAll('p')
+const result = document.getElementById('result')
 
-function countTotal () {
-  // console.log(arguments)
-  const total = Array.from(arguments).reduce(
-    (total, currNum) => (total += currNum),
-    0
-  )
-  console.log(total)
-}
+// let newText = Array.from(p);
+// newText = newText.map(item => `<span>${item.textContent}</span>`)
+//   .join(' ')
+// result.innerHTML = newText
 
-countTotal(67, 89, 54)
+// short version
+const text = Array.from(document.querySelectorAll('p'), item => {
+  return `<span>${item.textContent}</span>`
+}).join(' ')
+
+result.innerHTML = text
