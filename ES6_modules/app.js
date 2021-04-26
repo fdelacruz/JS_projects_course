@@ -1,8 +1,4 @@
-const people = [
-  { name: 'john', job: 'developer' },
-  { name: 'susan', job: 'designer' },
-  { name: 'anna', job: 'manager' }
-]
+import { people } from './utils/data.js'
 
 const container = document.querySelector('.container')
 const btn = document.querySelector('.btn')
