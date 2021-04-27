@@ -2,28 +2,26 @@
 // Promises - Pending, Resolved, Rejected
 // then catch - pass another callback
 
-// const heading1 = document.querySelector('.one')
-// const heading2 = document.querySelector('.two')
-// const heading3 = document.querySelector('.three')
+const heading1 = document.querySelector('.one')
+const heading2 = document.querySelector('.two')
+const heading3 = document.querySelector('.three')
 const btn = document.querySelector('.btn')
-const container = document.querySelector('.img-container')
-const url = 'https://source.unsplash.com/random'
 
 btn.addEventListener('click', () => {
-  loadImage(url)
-    .then(data => container.appendChild(data))
-    .catch(err => console.log(err))
+  addColor(1000, heading1, 'red')
+    .then(() => addColor(2000, heading2, 'green'))
+    .then(() => addColor(1000, heading3, 'blue')).catch((err) => console.log(err))
 })
 
-const loadImage = url => {
+const addColor = (time, element, color) => {
   return new Promise((resolve, reject) => {
-    const img = new Image();
-    img.addEventListener('load', () => {
-      resolve(img)
-    })
-    img.addEventListener('error', () => {
-      reject(new Error(`Failed to load image from the source: ${url}`))
-    })
-    img.src = url
+    if (element) {
+      setTimeout(() => {
+        element.style.color = color
+        resolve()
+      }, time)
+    } else {
+      reject(new Error(`There is no such element ${element}`))
+    }
   })
 }
