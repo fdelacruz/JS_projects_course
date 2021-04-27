@@ -1,27 +1,19 @@
-// Make Soup
-// Boil Water 10 min
-// Chop Carrots
-// Add Carrots, boil for 5 min
-// Chop Onion
-// Add Onion, boil for 5 min
-// BROWSER!!! Fetch Data, Get Geolocation, setTimeout, setTimer, etc.
 // callbacks, promises, async/await
 
-const boilWater = time => {
-  console.log('boiling...')
-  setTimeout(() => {
-    console.log('done.')
-    console.log('add carrots')
-    setTimeout(() => {
-      console.log('carrots done')
-      console.log('add onions')
-      setTimeout(() => {
-        console.log('onion done')
-      }, 500)
-    }, 5000)
-    console.log('chop onion')
-  }, 10000)
-}
+const heading1 = document.querySelector('.one')
+const heading2 = document.querySelector('.two')
+const heading3 = document.querySelector('.three')
 
-boilWater()
-console.log('chop carrots')
+const btn = document.querySelector('.btn')
+
+btn.addEventListener('click', () => {
+  setTimeout(() => {
+    heading1.style.color = 'red'
+    setTimeout(() => {
+      heading2.style.color = 'green'
+      setTimeout(() => {
+        heading3.style.color = 'blue'
+      }, 3000)
+    }, 2000)
+  }, 1000)
+})
