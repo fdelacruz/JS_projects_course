@@ -1,17 +1,20 @@
-// Javascript is single threade, synchronous language
+// Make Soup
+// Boil Water 10 min
+// Chop Carrots
+// Add Carrots, boil for 5 min
+// Chop Onion
+// Add Onion, boil for 5 min
 
-console.log("I'm first");
-console.log("I'm second");
-console.log("I'm third");
-
-console.log("I'm first");
-boilingWater()
-console.log("I'm third");
-
-function boilingWater() {
-  console.log('boiling...');
-  for (let i = 0; i < 10000; i++) {
-    console.log('still not done...');
+const boilWater = time => {
+  console.log('boiling...')
+  for (let i = 0; i < time; i++) {
+    console.log('still not done...')
   }
-  console.log('done.');
+  console.log('done.')
 }
+
+boilWater(10000)
+console.log('chop onion')
+boilWater(5000)
+console.log('chop carrot')
+boilWater(5000)
