@@ -1,7 +1,10 @@
-const showDrink = async (url) => {
-  console.log(url)
+import fetchDrinks from './fetchDrinks.js'
 
+const showDrink = async url => {
   // fetch drinks
+  const data = await fetchDrinks(url)
+  console.log(data)
+
   // display drinks
 }
 
