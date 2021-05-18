@@ -34,3 +34,24 @@ container.innerHTML = people
         </article>`
   })
   .join('')
+
+const StartSlider = type => {
+  const active = document.querySelector('.active')
+  const last = document.querySelector('.last')
+  let next = active.nextElementSibling
+  active.classList.remove(['active'])
+  last.classList.remove(['last'])
+  next.classList.remove(['next'])
+
+  active.classList.add('last')
+  last.classList.add('next')
+  next.classList.add('active')
+}
+
+nextBtn.addEventListener('click', () => {
+  StartSlider()
+})
+
+prevBtn.addEventListener('click', () => {
+  StartSlider('prev')
+})
